@@ -1,2 +1,4 @@
 go mod init api
 go get github.com/gorilla/mux --- Instalar pacote de rotas
+go get github.com/joho/godotenv --- Instalar variaveis de ambiente
+go get github.com/go-sql-driver/mysql -- Instalar driver mysql
