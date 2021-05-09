@@ -1,4 +1,5 @@
 go mod init api
+go run main.go --- Subir servidor porta 5000 ou 9000 
 go get github.com/gorilla/mux --- Instalar pacote de rotas
 go get github.com/joho/godotenv --- Instalar variaveis de ambiente
 go get github.com/go-sql-driver/mysql -- Instalar driver mysql
