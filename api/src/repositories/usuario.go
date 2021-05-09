@@ -1,7 +1,7 @@
-package repositorios
+package repositories
 
 import (
-	"api/api/src/modelos"
+	"api/api/src/models"
 	"database/sql"
 )
 
@@ -13,7 +13,7 @@ func NovoRepositorioDeUsuario(db *sql.DB) *Usuario {
 	return &Usuario{db}
 }
 
-func (repositorio Usuario) Criar(Usuario modelos.Usuario) (uint64, error) {
+func (repositorio Usuario) Criar(Usuario models.Usuario) (uint64, error) {
 	statement, erro := repositorio.db.Prepare(
 		"insert into usuarios (nome, nick, email, senha) values (?,?,?,?)",
 	)
