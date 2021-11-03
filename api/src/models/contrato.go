@@ -1,13 +1,13 @@
 package models
 
 type Contrato struct {
-	Tipo  string `json:"tipo"`
-	Idcliente  string  `json:"idcliente"`
-	Contrato  string  `json:"contrato"`
-	Nome  string  `json:"nome"`
-	Titular string    `json:"titular"`
-	CpfCnpj  string    `json:"cpf_cnpj"`
-	UltMesRefPg string `json:"ult_mes_ref_pg"`
-	DiasAtraso  string    `json:"dias_atraso"`
-	Status string `json:"status"`
+	Tipo  string `json:"tipo, omitempty"`
+	Idcliente  string  `json:"idcliente, omitempty"`
+	Contrato  string  `json:"contrato, omitempty"`
+	Nome  string  `json:"nome, omitempty"`
+	Titular string    `json:"titular, omitempty"`
+	CpfCnpj  *string    `json:"cpf_cnpj, omitempty"`
+	UltPg string `json:"ult_pg, omitempty"`
+	DiasAtraso  string    `json:"dias_atraso, omitempty"`
+	Status string `json:"status, omitempty"`
 }

@@ -7,7 +7,7 @@ import (
 
 var rotasContrato = []Rota{
 	{
-		URI:                "/contrato/{contrato}",
+		URI:                "/contrato/{contratoId}",
 		Metodo:             http.MethodGet,
 		Funcao:             controllers.BuscarContrato,
 		RequerAutenticacao: false,
