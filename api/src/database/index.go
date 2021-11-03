@@ -4,11 +4,11 @@ import (
 	"api/api/src/config"
 	"database/sql"
 
-	_ "github.com/go-sql-driver/mysql"
+	_"github.com/nakagami/firebirdsql"
 )
 
 func Conectar() (*sql.DB, error) {
-	db, erro := sql.Open("mysql", config.StringConexaoBanco)
+	db, erro := sql.Open("firebirdsql", config.StringConexaoBanco)
 
 	if erro != nil {
 		return nil, erro

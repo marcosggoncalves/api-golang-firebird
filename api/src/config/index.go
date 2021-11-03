@@ -1,7 +1,6 @@
 package config
 
 import (
-	"fmt"
 	"log"
 	"os"
 	"strconv"
@@ -27,9 +26,5 @@ func Carregar() {
 		Porta = 9000
 	}
 
-	StringConexaoBanco = fmt.Sprintf("%s:%s@/%s?charset=utf8&parseTime=True&loc=Local",
-		os.Getenv("DB_USUARIO"),
-		os.Getenv("DB_SENHA"),
-		os.Getenv("DB_DATABASE"),
-	)
+	StringConexaoBanco = "SYSDBA:masterkey@suportedouradoscob.ddns.net:3050/C:/Genus/Dados/Primavera/SOFTPAX.FDB"
 }
