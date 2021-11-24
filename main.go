@@ -5,11 +5,20 @@ import (
 	"fmt"
 	"log"
 	"net/http"
+	"os"
+
+	"github.com/joho/godotenv"
 )
 
 func main() {
-	r := router.Router()
-	fmt.Println("Starting server on the port 9000...")
+	err := godotenv.Load(".env")
 
-	log.Fatal(http.ListenAndServe(":9000", r))
+	if err != nil {
+		log.Fatalf("Error loading .env file")
+	}
+
+	r := router.Router()
+	fmt.Println("Starting server on the port:" + os.Getenv("PORT"))
+
+	log.Fatal(http.ListenAndServe(os.Getenv("PORT"), r))
 }
