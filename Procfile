@@ -1,1 +1,1 @@
-web: firebird-golang
+web: bin/firebird-golang
