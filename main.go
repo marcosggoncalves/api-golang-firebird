@@ -2,6 +2,7 @@ package main
 
 import (
 	"firebird-golang/router"
+	"fmt"
 	"log"
 	"net/http"
 	"os"
@@ -18,5 +19,6 @@ func main() {
 
 	r := router.Router()
 
-	log.Fatal(http.ListenAndServe(os.Getenv("PORT"), r))
+	fmt.Printf("Rodando na porta: %s", os.Getenv("PORT"))
+	log.Fatal(http.ListenAndServe(fmt.Sprintf(":%s", os.Getenv("PORT")), r))
 }
