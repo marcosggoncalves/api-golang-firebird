@@ -1,17 +1,15 @@
 package main
 
 import (
-	"api/api/src/config"
-	"api/api/src/router"
+	"firebird-golang/router"
 	"fmt"
 	"log"
 	"net/http"
 )
 
 func main() {
-	config.Carregar()
-	r := router.Gerar()
+	r := router.Router()
+	fmt.Println("Starting server on the port 9000...")
 
-	fmt.Printf("Rodando na porta: %d", config.Porta)
-	log.Fatal(http.ListenAndServe(fmt.Sprintf(":%d", config.Porta), r))
+	log.Fatal(http.ListenAndServe(":9000", r))
 }

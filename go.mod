@@ -1,10 +1,10 @@
-module api
+module firebird-golang
 
 go 1.17
 
 require (
-	github.com/gorilla/mux v1.8.0
-	github.com/joho/godotenv v1.4.0
+	github.com/gorilla/mux v1.7.4
+	github.com/joho/godotenv v1.3.0
 	github.com/nakagami/firebirdsql v0.9.3
 )
 
